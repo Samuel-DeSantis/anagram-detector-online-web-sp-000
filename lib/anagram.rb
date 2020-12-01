@@ -13,7 +13,7 @@ class Anagram
 
     @anagrams = anagrams
     @anagrams.select.with_index do |word, index|
-      word.split(//).sort
+      @word == word.split(//).sort
 
 
 
