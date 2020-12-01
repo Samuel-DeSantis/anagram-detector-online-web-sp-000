@@ -12,13 +12,13 @@ class Anagram
     @word.sort!
 
     @split_anagrams = []
-
+s
     @anagrams = anagrams
     @anagrams.each { |word| @split_anagrams << word.split(//) }
 
     @split_anagrams.each { |word| word.sort! }
 
-    @split_anagrams.select{|word| word == @word }
+    @split_anagrams.select{|word| word == @word }.flatten
   end
 end
 
