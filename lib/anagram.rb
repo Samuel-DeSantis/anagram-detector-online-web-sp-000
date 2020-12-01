@@ -18,7 +18,7 @@ s
 
     @split_anagrams.each { |word| word.sort! }
 
-    @split_anagrams.select{|word| word == @word }.flatten
+    @split_anagrams.select{|word| word == @word }
   end
 end
 
