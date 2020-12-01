@@ -8,19 +8,21 @@ class Anagram
   end
 
   def match(anagrams)
-    @word = @word.split(//)
+    @word = word.split(//)
     @word.sort!
 
-    @split_anagrams = []
-
     @anagrams = anagrams
-    @anagrams.each { |word| @split_anagrams << word.split(//) }
+    @anagrams.select.with_index do |word, index|
+      word.split(//).sort
 
-    @split_anagrams.each { |word| word.sort! }
 
-    @split_anagrams.select{|word| word == @word }
+
+    end
   end
 end
+
+# Word compares against anagram [ , ]
+# Word and Anagram needs split and sorted
 
 #@word = @word.split(//)
 #@word.sort!
