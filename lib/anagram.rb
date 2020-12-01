@@ -18,7 +18,7 @@ class Anagram
 
     @split_anagrams.each { |word| word.sort! }
 
-    @split_anagrams.find{|word| word == @word }
+    @split_anagrams.select{|word| word == @word }
   end
 end
 
