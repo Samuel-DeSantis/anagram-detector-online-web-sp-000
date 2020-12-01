@@ -8,16 +8,8 @@ class Anagram
   end
 
   def match(anagrams)
-    @word = word.split(//)
-    @word.sort!
-
     @anagrams = anagrams
-    @anagrams.select.with_index do |word, index|
-      @word == word.split(//).sort
-
-
-
-    end
+    @anagrams.select.with_index { |word, index| @word.split(//).sort == word.split(//).sort }
   end
 end
 
